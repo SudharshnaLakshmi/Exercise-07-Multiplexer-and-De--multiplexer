@@ -1,0 +1,12 @@
+module ex07(I0,I1,I2,I3,S1,S1,Y)
+input I0,I1,I2,I3;
+output Y;
+not(S0c,S0);
+nor(S1c,S1);
+wire P,Q,R,S;
+and (P,S0,S1c,I0);
+and(Q,S0c,S1,I1);
+and(R,S0,S1c,I2);
+and(S,S0,S1,I3);
+or(Y,P,Q,R,S);
+endmodule
